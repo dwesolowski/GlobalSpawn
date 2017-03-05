@@ -1,0 +1,26 @@
+name: ${name}
+version: ${version}
+description: ${description}
+author: ${author}
+website: ${url}
+
+main: ${mainClass}
+
+commands:
+  setspawn:
+    default: op
+    description: Sets the server spawn point using x,y,z,pitch,yaw.
+  spawn:
+    default: true
+    description: Teleports a player to the server spawn point.
+  spawnreload:
+      default: op
+      description: Reloads configuration file.
+
+permissions:
+  globalspawn.setspawn:
+    default: op
+    description: Sets the server spawn point using x,y,z,pitch,yaw.
+  globalspawn.spawnreload:
+      default: op
+      description: Reloads configuration file.
