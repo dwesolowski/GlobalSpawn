@@ -9,7 +9,8 @@ Create a server spawn point for new and returning players.
 - /spawn : Teleports a player to the server spawn point.  
 - /spawnreload : Reloads configuration file.
 
-## Permissions:  
+## Permissions:
+- globalspawn.spawn
 - globalspawn.setspawn  
 - globalspawn.spawnreload 
 
