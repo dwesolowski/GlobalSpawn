@@ -8,19 +8,27 @@ main: ${mainClass}
 
 commands:
   setspawn:
-    default: op
-    description: Sets the server spawn point using x,y,z,pitch,yaw.
+    description: "Sets the server spawn point using x,y,z,pitch,yaw."
+    permission: globalspawn.setspawn
   spawn:
-    default: true
-    description: Teleports a player to the server spawn point.
+    description: "Teleports a player to the server spawn point."
+    permission: globalspawn.spawn
   spawnreload:
-      default: op
-      description: Reloads configuration file.
-
+    description: "Reloads configuration file."
+    permission: globalspawn.spawnreload
 permissions:
+  globalspawn.*:
+    children:
+      globalspawn.setspawn: true
+      globalspawn.spawn: true
+      globalspawn.spawnreload: true
+    description: "Gives access to all globalspawn commands"
   globalspawn.setspawn:
     default: op
-    description: Sets the server spawn point using x,y,z,pitch,yaw.
+    description: "Sets the server spawn point using x,y,z,pitch,yaw."
+  globalspawn.spawn:
+    default: true
+    description: "Teleports a player to the server spawn point."
   globalspawn.spawnreload:
-      default: op
-      description: Reloads configuration file.
+    default: op
+    description: "Reloads configuration file."
