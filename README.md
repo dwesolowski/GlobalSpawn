@@ -2,7 +2,7 @@
 
 Create a server spawn point for new and returning players.
 
-#### Supported Versions: 1.11+
+#### Supported Versions: 1.13+
 
 ## Commands:  
 - /setspawn : Sets the server spawn point using x,y,z,pitch,yaw.  

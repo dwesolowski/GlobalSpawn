@@ -1,10 +1,7 @@
-name: ${name}
+name: GlobalSpawn
 version: ${version}
-description: ${description}
-author: ${author}
-website: ${url}
-
-main: ${mainClass}
+main: com.github.dwesolowski.globalspawn.GlobalSpawn
+api-version: 1.13
 
 commands:
   setspawn:
