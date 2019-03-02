@@ -1,5 +1,7 @@
 # GlobalSpawn - Plugin for Bukkit | Spigot
 
+[![Software License](http://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+
 Create a server spawn point for new and returning players.
 
 #### Supported Versions: 1.13+
