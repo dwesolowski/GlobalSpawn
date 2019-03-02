@@ -16,6 +16,7 @@ public class GlobalSpawn extends JavaPlugin implements Listener {
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
         saveConfig();
+        registerMetrics();
     }
 
     @EventHandler
@@ -23,6 +24,10 @@ public class GlobalSpawn extends JavaPlugin implements Listener {
         Player player = event.getPlayer();
         Location spawn = (Location) getConfig().get("serverSpawn");
         player.teleport(spawn);
+    }
+
+    private void registerMetrics() {
+        final MetricsLite metrics = new MetricsLite(this);
     }
 
     @Override
