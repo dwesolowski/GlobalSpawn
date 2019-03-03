@@ -15,15 +15,17 @@ public class GlobalSpawn extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
-        saveConfig();
+        saveDefaultConfig();
         registerMetrics();
     }
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        Location spawn = (Location) getConfig().get("serverSpawn");
-        player.teleport(spawn);
+        if (getConfig().get("serverSpawn") != null) {
+            Player player = event.getPlayer();
+            Location spawn = (Location) getConfig().get("serverSpawn");
+            player.teleport(spawn);
+        }
     }
 
     private void registerMetrics() {
